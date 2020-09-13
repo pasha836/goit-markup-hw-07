@@ -1,0 +1,29 @@
+.btn {
+	padding: 10px 0;
+	width: 200px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 1.88;
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: $primary-bg-color;
+	fill: $primary-bg-color;
+	background: $accent-color;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	transition-property: color, transform, fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 0;
+	&:hover,
+	:focus {
+		color: $accent-color;
+		background-color: $primary-bg-color;
+		fill: $accent-color;
+		cursor: pointer;
+	}
+}

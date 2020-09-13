@@ -4,15 +4,24 @@
 	justify-content: center;
 }
 
-@mixin bordered($color: black, $type: solid) {
-	border-top: 1px $type $color;
-	border-bottom: 1px $type $color;
+@mixin font($fw, $fs, $ls) {
+	font-weight: $fw;
+	font-size: $fs;
+	letter-spacing: $ls;
 }
 
-@mixin generateIcons($iconList) {
-	@each $iconName in $iconList {
-		.icon-#{$iconName} {
-			background-image: url("../images/#{$iconName}.svg");
-		}
+@mixin for-phone {
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		@content;
+	}
+}
+@mixin for-tablet {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		@content;
+	}
+}
+@mixin for-desktop {
+	@media screen and (min-width: 1200px) {
+		@content;
 	}
 }

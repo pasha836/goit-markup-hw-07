@@ -1,0 +1,36 @@
+.header-contacts {
+	align-items: center;
+	margin-left: auto;
+}
+.contact-list {
+	display: flex;
+	@include font(500, 14px, 0.02em);
+	line-height: 1.14;
+	color: $primary-text-color;
+}
+.header-contacts-item:not(:last-child) {
+	margin-right: 50px;
+}
+.contact-link {
+	display: inline-flex;
+	color: $primary-text-color;
+	fill: $primary-text-color;
+
+	transition-property: color, transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 0;
+	&:hover,
+	:focus {
+		transition: color, transform;
+
+		color: $accent-color;
+		fill: $accent-color;
+		cursor: pointer;
+	}
+}
+.contact-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
